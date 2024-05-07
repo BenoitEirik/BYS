@@ -10,12 +10,21 @@ export default defineI18nConfig(() => ({
       },
       blocks: {
         keywords: {
-          title: 'Add one or more keywords',
-          input_placeholder: 'Writes one or more keywords'
+          title: 'Add a word or a phrase',
+          placeholder: 'Write a word or a phrase',
+          checkbox_exact_match: 'Exact match',
+          exclude: 'Exclude from search'
+        },
+        logical: {
+          title: 'Word or phrase comparison',
+          placeholder_select: 'Select an operator',
+          or: 'OR',
+          and: 'AND'
         },
         filetype: {
           title: 'Search for specific files',
-          placeholder: 'Select an extension'
+          placeholder_input: 'pdf, doc, txt...',
+          placeholder_select: 'Select an extension'
         }
       }
     },
@@ -27,12 +36,21 @@ export default defineI18nConfig(() => ({
       },
       blocks: {
         keywords: {
-          title: 'Ajouter un ou plusieurs mots-clés',
-          placeholder: 'Écrivez un ou plusieurs mots-clés'
+          title: 'Ajouter un mot ou une phrase',
+          placeholder: 'Écrivez un mot ou une phrase',
+          checkbox_exact_match: 'Mot ou expression exacte',
+          exclude: 'Exclure le mot ou l\'expression'
+        },
+        logical: {
+          title: 'Comparaison de mot ou phrase',
+          placeholder_select: 'Sélectionner un opérateur',
+          or: 'OU',
+          and: 'ET'
         },
         filetype: {
           title: 'Recherche de fichiers spécifiques',
-          placeholder: 'Selectionnez une extension'
+          placeholder_input: 'pdf, doc, txt...',
+          placeholder_select: 'Selectionnez une extension'
         }
       }
     }

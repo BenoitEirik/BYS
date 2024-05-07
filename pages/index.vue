@@ -13,6 +13,7 @@
       <div class="flex flex-col gap-4 basis-1/2">
         <h2 class="text-xl font-bold text-center">{{ $t('operator_categories.keywords') }}</h2>
         <BlockKeywords />
+        <BlockLogical />
       </div>
 
       <div class="flex flex-col gap-4 basis-1/2">
