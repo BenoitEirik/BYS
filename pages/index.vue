@@ -10,15 +10,16 @@
     </section>
 
     <section class="flex p-4 gap-4 basis-3/5 w-[1000px]">
-      <div class="flex flex-col gap-4 basis-1/2">
+      <div class="flex flex-col gap-4 basis-1/2 max-w-[50%]">
         <h2 class="text-xl font-bold text-center">{{ $t('operator_categories.keywords') }}</h2>
         <BlockKeywords />
         <BlockLogical />
       </div>
 
-      <div class="flex flex-col gap-4 basis-1/2">
+      <div class="flex flex-col gap-4 basis-1/2 max-w-[50%]">
         <h2 class="text-xl font-bold text-center">{{ $t('operator_categories.specific') }}</h2>
         <BlockFiletype />
+        <BlockSite />
       </div>
     </section>
   </main>

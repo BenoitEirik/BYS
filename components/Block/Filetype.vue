@@ -6,11 +6,12 @@ const selected = ref<string>('')
 <template>
   <BlockWrapper :title="$t('blocks.filetype.title')">
     <template #input>
-      <div class="flex w-full gap-4">
+      <div class="flex items-center w-full gap-2">
         <input type="text" :placeholder="$t('blocks.filetype.placeholder_input')"
-          class="w-auto p-2 px-3 bg-white border rounded-md basis-1/2">
+          class="w-full p-2 px-3 bg-white border rounded-md">
+        <span class="px-2">{{ $t('blocks.filetype.or') }}</span>
         <!-- https://developers.google.com/search/docs/crawling-indexing/indexable-file-types -->
-        <select v-model="selected" class="p-2 px-3 bg-white border rounded-md basis-1/2">
+        <select v-model="selected" class="w-full p-2 px-3 bg-white border rounded-md">
           <option value="" disabled hidden>{{ $t('blocks.filetype.placeholder_select') }}</option>
           <option value="pdf">pdf</option>
           <option value="docx">docx</option>

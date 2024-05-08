@@ -15,13 +15,13 @@ const selected = ref<string>('')
     </template>
     <template #advanced>
       <div class="flex items-center w-full gap-2">
-        <input type="checkbox" id="exact-match-2" />
-        <label for="exact-match-2">{{ $t('blocks.keywords.checkbox_exact_match') }}</label>
+        <input type="checkbox" id="logical-exact-match" />
+        <label for="logical-exact-match">{{ $t('blocks.keywords.checkbox_exact_match') }}</label>
       </div>
 
       <div class="flex items-center w-full gap-2">
-        <input type="checkbox" id="exclude-2" />
-        <label for="exclude-2">{{ $t('blocks.keywords.exclude') }}</label>
+        <input type="checkbox" id="logical-exclude" />
+        <label for="logical-exclude">{{ $t('blocks.keywords.checkbox_exclude') }}</label>
       </div>
     </template>
   </BlockWrapper>
