@@ -8,10 +8,10 @@ const selected = ref<string>('')
     <template #input>
       <div class="flex items-center w-full gap-2">
         <input type="text" :placeholder="$t('blocks.filetype.placeholder_input')"
-          class="w-full p-2 px-3 bg-white border rounded-md">
-        <span class="px-2">{{ $t('blocks.filetype.or') }}</span>
+          class="w-full px-2 py-1 bg-white border rounded-md">
+        <span class="px-2 py-1">{{ $t('blocks.filetype.or') }}</span>
         <!-- https://developers.google.com/search/docs/crawling-indexing/indexable-file-types -->
-        <select v-model="selected" class="w-full p-2 px-3 bg-white border rounded-md">
+        <select v-model="selected" class="w-full px-2 py-1 bg-white border rounded-md">
           <option value="" disabled hidden>{{ $t('blocks.filetype.placeholder_select') }}</option>
           <option value="pdf">pdf</option>
           <option value="docx">docx</option>

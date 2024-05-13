@@ -5,7 +5,7 @@ const selected = ref<string>('')
 <template>
   <BlockWrapper :title="$t('blocks.site.title')">
     <template #input>
-      <input type="text" class="w-full p-2 px-3 bg-white border rounded-md"
+      <input type="text" class="w-full px-2 py-1 bg-white border rounded-md"
         :placeholder="$t('blocks.site.placeholder')">
     </template>
   </BlockWrapper>

@@ -36,10 +36,9 @@ export default defineI18nConfig(() => ({
         },
         daterange: {
           title: 'Search over a period',
-          label_before: 'After:',
-          placeholder_before: 'Sélectionnez une date',
-          label_after: 'Before:',
-          placeholder_after: 'Sélectionnez une date'
+          label_from: 'From',
+          label_to: 'to',
+          placeholder: 'Select a period'
         }
       }
     },
@@ -77,10 +76,9 @@ export default defineI18nConfig(() => ({
         },
         daterange: {
           title: 'Recherche sur une période',
-          label_before: 'Après :',
-          placeholder_before: 'Sélectionnez une date',
-          label_after: 'Avant :',
-          placeholder_after: 'Sélectionnez une date'
+          label_from: 'Du',
+          label_to: 'au',
+          placeholder: 'Sélectionnez une période'
         }
       }
     }

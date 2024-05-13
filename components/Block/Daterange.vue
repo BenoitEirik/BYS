@@ -1,20 +1,17 @@
 <script lang="ts" setup>
-const dateAfter = ref<null | Date>(null)
-const dateBefore = ref<null | Date>(null)
+const { t } = useI18n()
 
-const placeholderAfter = computed(() => {
-  if (dateAfter.value === null) {
-    return ''
-  } else {
-    return `${dateAfter.value.getFullYear()}-${String(dateAfter.value.getMonth() + 1).padStart(2, '0')}-${String(dateAfter.value.getDate()).padStart(2, '0')}`
-  }
+const range = ref({
+  start: null as null | Date,
+  end: new Date()
 })
 
-const placeholderBefore = computed(() => {
-  if (dateBefore.value === null) {
+const placeholder = computed(() => {
+  if (range.value.start === null) {
     return ''
   } else {
-    return `${dateBefore.value.getFullYear()}-${String(dateBefore.value.getMonth() + 1).padStart(2, '0')}-${String(dateBefore.value.getDate()).padStart(2, '0')}`
+    return `${t('blocks.daterange.label_from')} ${range.value.start.getFullYear()}-${String(range.value.start.getMonth() + 1).padStart(2, '0')}-${String(range.value.start.getDate()).padStart(2, '0')}` +
+    ` ${t('blocks.daterange.label_to')} ${range.value.end.getFullYear()}-${String(range.value.end.getMonth() + 1).padStart(2, '0')}-${String(range.value.end.getDate()).padStart(2, '0')}`
   }
 })
 </script>
@@ -22,22 +19,11 @@ const placeholderBefore = computed(() => {
 <template>
   <BlockWrapper :title="$t('blocks.daterange.title')">
     <template #input>
-      <div class="flex justify-between w-full gap-2">
-        <span class="text-nowrap">Après :</span>
-        <VDatePicker v-model="dateAfter">
-          <template #default="{ togglePopover }">
-            <button class="w-full p-1 px-2 bg-white border rounded-md" @click="togglePopover">
-              {{ placeholderAfter === '' ? $t('blocks.daterange.placeholder_after') : placeholderAfter }}
-            </button>
-          </template>
-        </VDatePicker>
-      </div>
       <div class="flex items-center justify-between w-full gap-2">
-        <span class="text-nowrap">Avant :</span>
-        <VDatePicker v-model="dateBefore">
+        <VDatePicker v-model.range="range">
           <template #default="{ togglePopover }">
             <button class="w-full p-1 px-2 bg-white border rounded-md" @click="togglePopover">
-              {{ placeholderBefore === '' ? $t('blocks.daterange.placeholder_before') : placeholderBefore }}
+              {{ placeholder === '' ? $t('blocks.daterange.placeholder') : placeholder }}
             </button>
           </template>
         </VDatePicker>

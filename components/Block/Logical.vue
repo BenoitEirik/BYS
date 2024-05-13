@@ -5,13 +5,13 @@ const selected = ref<string>('')
 <template>
   <BlockWrapper :title="$t('blocks.logical.title')">
     <template #input>
-      <input type="text" class="w-full p-2 px-3 bg-white border rounded-md" :placeholder="$t('blocks.keywords.placeholder')">
-      <select v-model="selected" class="p-2 px-3 bg-white border rounded-md">
+      <input type="text" class="w-full px-2 py-1 bg-white border rounded-md" :placeholder="$t('blocks.keywords.placeholder')">
+      <select v-model="selected" class="px-2 py-1 bg-white border rounded-md">
         <option value="" hidden disabled>{{ $t('blocks.logical.placeholder_select') }}</option>
         <option value="or">{{ $t('blocks.logical.or') }}</option>
         <option value="and">{{ $t('blocks.logical.and') }}</option>
       </select>
-      <input type="text" class="w-full p-2 px-3 bg-white border rounded-md" :placeholder="$t('blocks.keywords.placeholder')">
+      <input type="text" class="w-full px-2 py-1 bg-white border rounded-md" :placeholder="$t('blocks.keywords.placeholder')">
     </template>
     <template #advanced>
       <div class="flex items-center w-full gap-2">
