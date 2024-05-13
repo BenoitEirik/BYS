@@ -19,6 +19,16 @@
       </div>
 
       <div class="flex items-center w-full gap-2">
+        <input type="checkbox" id="keywords-inurl" />
+        <label for="keywords-inurl">{{ $t('blocks.keywords.checkbox_inurl') }}</label>
+      </div>
+
+      <div class="flex items-center w-full gap-2">
+        <input type="checkbox" id="keywords-intext" />
+        <label for="keywords-intext">{{ $t('blocks.keywords.checkbox_intext') }}</label>
+      </div>
+
+      <div class="flex items-center w-full gap-2">
         <input type="checkbox" id="keywords-exclude" />
         <label for="keywords-exclude">{{ $t('blocks.keywords.checkbox_exclude') }}</label>
       </div>

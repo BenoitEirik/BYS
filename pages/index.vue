@@ -20,6 +20,7 @@
         <h2 class="text-xl font-bold text-center">{{ $t('operator_categories.specific') }}</h2>
         <BlockFiletype />
         <BlockSite />
+        <BlockDaterange />
       </div>
     </section>
   </main>

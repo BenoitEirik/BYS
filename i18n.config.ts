@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
     en: {
       title: 'Build Your Search.',
       operator_categories: {
-        keywords: 'Keywords',
+        keywords: 'Keyword operators',
         specific: 'Specific operators'
       },
       blocks: {
@@ -14,6 +14,8 @@ export default defineI18nConfig(() => ({
           placeholder: 'Write a word or a phrase',
           checkbox_exact_match: 'Exact match',
           checkbox_intitle: 'Search only in the page\'s title',
+          checkbox_inurl: 'Search only in page URL',
+          checkbox_intext: 'Search only in body page',
           checkbox_exclude: 'Exclude from search'
         },
         logical: {
@@ -31,13 +33,20 @@ export default defineI18nConfig(() => ({
         site: {
           title: 'Search on a specific domain',
           placeholder: 'e.g. wikipedia.org or .org'
+        },
+        daterange: {
+          title: 'Search over a period',
+          label_before: 'After:',
+          placeholder_before: 'Sélectionnez une date',
+          label_after: 'Before:',
+          placeholder_after: 'Sélectionnez une date'
         }
       }
     },
     fr: {
       title: 'Build Your Search.',
       operator_categories: {
-        keywords: 'Mots-clés',
+        keywords: 'Opérateurs sur les mots-clés',
         specific: 'Opérateurs spécifiques'
       },
       blocks: {
@@ -46,6 +55,8 @@ export default defineI18nConfig(() => ({
           placeholder: 'Écrivez un mot ou une phrase',
           checkbox_exact_match: 'Mot ou expression exacte',
           checkbox_intitle: 'Rechercher uniquement dans le titre de la page',
+          checkbox_inurl: 'Rechercher uniquement dans l\'URL de la page',
+          checkbox_intext: 'Rechercher uniquement dans le corps de la page',
           checkbox_exclude: 'Exclure de la recherche'
         },
         logical: {
@@ -63,6 +74,13 @@ export default defineI18nConfig(() => ({
         site: {
           title: 'Recherche sur un domaine spécifique',
           placeholder: 'ex. wikipedia.org ou .org'
+        },
+        daterange: {
+          title: 'Recherche sur une période',
+          label_before: 'Après :',
+          placeholder_before: 'Sélectionnez une date',
+          label_after: 'Avant :',
+          placeholder_after: 'Sélectionnez une date'
         }
       }
     }
